@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function chunk(arr, size) {
+        let resultArr = [],
+          temp = [];
+        (start = 0), (end = size);
+        if (arr.length === 0) return [];
+        while (start < arr.length) {
+          if (start + size <= arr.length) {
+            temp = arr.slice(start, end);
+            resultArr.push(temp);
+            start += size;
+            end += size;
+          } else {
+            console.log(start,end);
+            resultArr.push(arr.slice(start, arr.length));
+            break;
+          }
+        }
+        return resultArr;
+      }
+      let arr = [1, 2, 3, 4, 5],
+        size = 1;
+      let result = chunk(arr, size);
+      console.log(result);
+    </script>
+  </body>
+</html>
