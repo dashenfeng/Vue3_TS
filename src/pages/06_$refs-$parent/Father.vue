@@ -43,7 +43,7 @@
 	function getAllChild(refs:{[key:string]:any}){
 		console.log(refs)
 		for (let key in refs){
-			refs[key].book += 3
+			refs[key].book += 3  // 因为在响应式对象里，自动解包了，所以book后面不用.value
 		}
 	}
 	// 向外部提供数据

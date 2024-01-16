@@ -23,7 +23,7 @@
       </Game>
 
       <Game>
-        <template #default="{youxi}">
+        <template #default="{youxi}"><!-- 等价于v-slot:default="{youxi}" -->
           <h3 v-for="g in youxi" :key="g.id">{{ g.name }}</h3>
         </template>
       </Game>

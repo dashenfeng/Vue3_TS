@@ -23,7 +23,7 @@
       </Category>
 
       <Category>
-        <template #s2>
+        <template #s2><!-- 语法糖 #来替换v-slot： -->
           <video video :src="videoUrl" controls></video>
         </template>
         <template #s1>

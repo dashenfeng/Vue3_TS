@@ -14,6 +14,7 @@
     name:'可莉',
     age:8
   })
+  // 解构会失去响应式，加上toRefs来解决这问题
   let {name, age} = toRefs(person)
   let changeName = ()=>{
     name.value = 'fengzi'
